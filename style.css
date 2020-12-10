@@ -1,0 +1,47 @@
+/* 設定預設值 */
+
+* {
+    /* 必須的，不加畫面很垃圾 */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* 可選的 */
+    font-family: sans-serif;
+    line-height: 1.6em;
+    font-size: 14px;
+}
+
+/* 一次套用多個設定 */
+
+#header, #left, #right {
+    display: block;
+}
+
+#header {
+    background-color: beige;
+    width: 100%;
+    height: 100px;
+}
+
+#left {
+    background-color: beige;
+    width: 65%;
+    height: 700px;
+    /* 排版方式 */
+    float: left;
+    margin-left: 1%;
+    /* 邊框 */
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #bb0a0a;
+}
+
+#right {
+    background-color: beige;
+    width: 25%;
+    height: 700px;
+    float: left;
+    margin-left: 1%;
+    border-style: solid;
+    border-radius: 10px;
+}
