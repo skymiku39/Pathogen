@@ -20,12 +20,59 @@ input {
   display: table;
   margin: 0 auto;
   margin-top: 10px;
+  /* 邊框 */
+  border-style: solid;
+  border-radius: 10px;
+  border-color: Black;
+  /* 動畫時長？ */
   transition: 0.5s time;
+}
+
+/* input動畫 */
+input:hover {
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  animation-name: borderFlashing;
+  animation-duration: 0.5s;
+  animation-delay: 0.2s;
+  -webkit-animation-name: borderFlashing;
+  -webkit-animation-duration: 0.5s;
+}
+
+/* 閃爍動畫設定 */
+@keyframes borderFlashing {
+  from {
+    border-color: black;
+    border-width: 3px;
+    width: 79%;
+    height: 29;
+  }
+  to {
+    border-color: gold;
+    border-width: 5px;
+    width: 83%;
+    height: 32;
+  }
+}
+@-webkit-keyframes borderFlashing {
+  from {
+    border-color: gold;
+    border-width: 5px;
+    width: 83%;
+    height: 32;
+  }
+  to {
+    border-color: black;
+    border-width: 3px;
+    width: 79%;
+    height: 29;
+  }
 }
 
 /* 指向Class changeArea */
 .changeArea {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 
 /* 一次套用多個設定 */
