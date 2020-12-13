@@ -1,5 +1,6 @@
 var areaChoose = null;
-
+var MetropolitanAreaSubtag = ["下水道", "停車場", "遊樂園", "公園"];
+var RuralAreaSubtag = ["農場", "遺跡", "露營地", "森林"];
 //初始化函數
 function Init() {
   // 區域按鈕
@@ -37,16 +38,19 @@ function RuralArea_Clicked() {
 }
 
 function Confirm_Clicked() {
-  document.getElementById("left").textContent = "";
+  var left = document.getElementById("left");
+  left.textContent = "";
   switch (areaChoose) {
     case "隨機":
       alert("隨機");
       break;
     case "都市":
-      alert("都市");
+      var result = Math.floor(Math.random() * MetropolitanAreaSubtag.length);
+      left.textContent = "都市－" + MetropolitanAreaSubtag[result];
       break;
     case "鄉村":
-      alert("鄉村");
+      var result = Math.floor(Math.random() * RuralAreaSubtag.length);
+      left.textContent = "鄉村－" + RuralAreaSubtag[result];
       break;
     case null:
       alert("null");
