@@ -37,6 +37,21 @@ function RuralArea_Clicked() {
   areaChoose = "鄉村";
 }
 
+function randomArea(Area) {
+  switch (Area) {
+    case "都市":
+      var result = Math.floor(Math.random() * MetropolitanAreaSubtag.length);
+      return "都市－" + MetropolitanAreaSubtag[result];
+
+    case "鄉村":
+      var result = Math.floor(Math.random() * RuralAreaSubtag.length);
+      return "鄉村－" + RuralAreaSubtag[result];
+
+    default:
+      break;
+  }
+}
+
 function Confirm_Clicked() {
   var left = document.getElementById("left");
   left.textContent = "";
@@ -45,12 +60,10 @@ function Confirm_Clicked() {
       alert("隨機");
       break;
     case "都市":
-      var result = Math.floor(Math.random() * MetropolitanAreaSubtag.length);
-      left.textContent = "都市－" + MetropolitanAreaSubtag[result];
+      left.textContent = randomArea("都市");
       break;
     case "鄉村":
-      var result = Math.floor(Math.random() * RuralAreaSubtag.length);
-      left.textContent = "鄉村－" + RuralAreaSubtag[result];
+      left.textContent = randomArea("鄉村");
       break;
     case null:
       alert("null");
