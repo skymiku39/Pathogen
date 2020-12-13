@@ -10,6 +10,9 @@ function Init() {
   document
     .getElementById("btn_RuralArea")
     .addEventListener("click", RuralArea_Clicked);
+  document
+    .getElementById("btn_Confirm")
+    .addEventListener("click", Confirm_Clicked);
 }
 
 // 按按鈕
@@ -33,4 +36,11 @@ function RuralArea_Clicked() {
   // 跳出視窗
   // alert("都市");
 }
+
+function Confirm_Clicked() {
+  document.getElementById("left").textContent = "";
+  // 跳出視窗
+  // alert("都市");
+}
+
 Init();

@@ -102,6 +102,7 @@ input:hover {
 }
 
 #right {
+  position: relative;
   background-color: beige;
   width: 25%;
   height: 700px;
@@ -109,4 +110,10 @@ input:hover {
   margin-left: 1%;
   border-style: solid;
   border-radius: 10px;
+}
+
+#btn_Confirm {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
 }
