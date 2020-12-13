@@ -1,6 +1,7 @@
 var areaChoose = null;
 var MetropolitanAreaSubtag = ["下水道", "停車場", "遊樂園", "公園"];
 var RuralAreaSubtag = ["農場", "遺跡", "露營地", "森林"];
+var AreaName = ["都市", "鄉村"];
 //初始化函數
 function Init() {
   // 區域按鈕
@@ -57,7 +58,8 @@ function Confirm_Clicked() {
   left.textContent = "";
   switch (areaChoose) {
     case "隨機":
-      alert("隨機");
+      var resultArea = Math.floor(Math.random() * AreaName.length);
+      left.textContent = randomArea(AreaName[resultArea]);
       break;
     case "都市":
       left.textContent = randomArea("都市");
