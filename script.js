@@ -56,7 +56,10 @@ function randomArea(Area) {
 }
 
 //隨機可視化
-function randomVisualize(Area, Result) {
+async function randomVisualize(Area, Result) {
+  //暫停
+  await sleep(1000);
+
   //隨機結果的資料顯示測試
   switch (Area) {
     case "都市":
@@ -70,6 +73,13 @@ function randomVisualize(Area, Result) {
     default:
       break;
   }
+}
+
+//sleep函數
+//1.await只能在以async關鍵字為前綴的函數中執行 (async function XXX)
+//2.await僅暫停當前async功能 (await sleep(3000))
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function Confirm_Clicked() {
