@@ -57,8 +57,12 @@ function randomArea(Area) {
 
 //隨機可視化
 async function randomVisualize(Area, Result) {
-  //暫停
-  await sleep(1000);
+  for (var sleepCount = 1; sleepCount < 700; sleepCount = sleepCount * 1.1) {
+    //暫停
+    await sleep(sleepCount);
+    left.textContent = sleepCount;
+  }
+  await sleep(100);
 
   //隨機結果的資料顯示測試
   switch (Area) {
